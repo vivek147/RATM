@@ -1,0 +1,13 @@
+F:\Repo\Atm\AccountInfo\RSA\bin\Debug\RSA.exe.config
+F:\Repo\Atm\AccountInfo\RSA\bin\Debug\RSA.exe
+F:\Repo\Atm\AccountInfo\RSA\bin\Debug\RSA.pdb
+F:\Repo\Atm\AccountInfo\RSA\obj\Debug\RSA.csprojResolveAssemblyReference.cache
+F:\Repo\Atm\AccountInfo\RSA\obj\Debug\MainWindow.baml
+F:\Repo\Atm\AccountInfo\RSA\obj\Debug\MainWindow.g.cs
+F:\Repo\Atm\AccountInfo\RSA\obj\Debug\App.g.cs
+F:\Repo\Atm\AccountInfo\RSA\obj\Debug\RSA_MarkupCompile.cache
+F:\Repo\Atm\AccountInfo\RSA\obj\Debug\RSA.g.resources
+F:\Repo\Atm\AccountInfo\RSA\obj\Debug\RSA.Properties.Resources.resources
+F:\Repo\Atm\AccountInfo\RSA\obj\Debug\RSA.csproj.GenerateResource.Cache
+F:\Repo\Atm\AccountInfo\RSA\obj\Debug\RSA.exe
+F:\Repo\Atm\AccountInfo\RSA\obj\Debug\RSA.pdb

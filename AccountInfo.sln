@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountInfo", "AccountInfo\AccountInfo.csproj", "{D498BD97-76E8-43F4-B16D-31397A182FC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{07502BED-B4EA-450D-85AF-8D25AB96E357}"
+	ProjectSection(SolutionItems) = preProject
+		DBquery.txt = DBquery.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSA", "RSA\RSA.csproj", "{B3C98671-E547-4C0D-9F01-3003478B1E38}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rockinvivek.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AccountInfo\\AccountInfo.csproj
+		SccProjectName1 = AccountInfo
+		SccLocalPath1 = AccountInfo
+		SccProjectUniqueName2 = RSA\\RSA.csproj
+		SccProjectName2 = RSA
+		SccLocalPath2 = RSA
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D498BD97-76E8-43F4-B16D-31397A182FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D498BD97-76E8-43F4-B16D-31397A182FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D498BD97-76E8-43F4-B16D-31397A182FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D498BD97-76E8-43F4-B16D-31397A182FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3C98671-E547-4C0D-9F01-3003478B1E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C98671-E547-4C0D-9F01-3003478B1E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C98671-E547-4C0D-9F01-3003478B1E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C98671-E547-4C0D-9F01-3003478B1E38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

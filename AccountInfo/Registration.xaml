@@ -1,0 +1,51 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="AccountInfo.Registration"
+        Title="Registration" Height="300" Width="557.353">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.765" Fill="AliceBlue" Height="450" Width="300"  />
+        <Border CornerRadius="30" Background="AntiqueWhite" Margin="0,0,0,0">
+                 
+            <Grid>
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" x:Name="textBlockHeading" Text="Welcome!Please Register Here:" FontStyle="Italic" VerticalAlignment="Top" Width="354"  FontSize="13" FontStretch="ExtraCondensed"/>
+                <TextBlock Height="30" FontSize="12" FontStyle="Italic" Margin="10,38,0,10" HorizontalAlignment="Right" VerticalAlignment="Top"  Cursor="Hand" >
+            Already Registered ? 
+            please click on
+         <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Cursor="Hand"  Width="64">
+                 <Hyperlink Click="Login_Click" FontSize="14" FontStyle="Normal">Login</Hyperlink>
+               </TextBlock>
+            
+        </TextBlock>
+               
+  
+        
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-111,1,1,1">
+                    <TextBlock Height="20" HorizontalAlignment="Right" Margin="117,40,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="220"  OpacityMask="Crimson" Foreground="#FFE5572C" Grid.ColumnSpan="2" />
+
+                    <StackPanel Orientation="Horizontal">
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="264,0,0,0" x:Name="textBlockEmailId" Text="EmailId" VerticalAlignment="Top" Width="49" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="0,0,0,0" x:Name="textBoxEmail" VerticalAlignment="Top" Width="131" LostFocus="textBoxEmail_LostFocus" Grid.ColumnSpan="2" />
+                </StackPanel >
+                    <StackPanel Orientation="Horizontal">  
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="255,11,0,0" x:Name="textBlockPassword" Text="Password:" VerticalAlignment="Top" Width="60"  />
+                    <PasswordBox Height="23" HorizontalAlignment="Left" Margin="0,11,0,0" x:Name="passwordBox1" VerticalAlignment="Top" Width="129" Grid.ColumnSpan="2" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Height="23" HorizontalAlignment="Left" Margin="203,13,0,0" x:Name="textBlockConfirmPwd" Text="ConfirmPassword:" VerticalAlignment="Top" Width="106" />
+                        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="7,13,0,0" x:Name="passwordBoxConfirm" VerticalAlignment="Top" Width="127" Grid.ColumnSpan="2" />
+                    </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" HorizontalAlignment="Right" Margin="4,24,4,4">
+                    <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="100,0,10,60" x:Name="Submit" VerticalAlignment="Bottom" Width="93" Click="Submit_Click" />
+                    <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="0,0,10,60" x:Name="button2" VerticalAlignment="Bottom" Width="77" Click="button2_Click" />
+                    <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,10,0,60" x:Name="button3" VerticalAlignment="Bottom" Width="82" Click="button3_Click" />
+                </StackPanel>
+                </StackPanel>
+            </Grid>
+            
+        </Border>
+    </Grid>
+
+</Window>

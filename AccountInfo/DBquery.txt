@@ -1,0 +1,26 @@
+create table Bank_Name(Id int identity not null primary key,BankName nvarchar(60))
+
+create table Bank_Detail(Card_Id  bigint not null primary key, Card_Type nvarchar(60) not null, 
+                            Cvv bigint not null  ,BankName_ID int not null
+                             foreign key(BankName_ID) references Bank_Name(Id) )
+                           
+                             drop table Bank_Detail
+                             
+Insert into Bank_Name values('ICICI')
+Insert into Bank_Name values('SBI')
+
+Insert into Bank_Detail values(5945636323438989,'CREDIT',114,1)
+Insert into Bank_Detail values(1445446143434899,'DEBIT',041,2)
+Insert into Bank_Detail values(9445446148434899,'DEBIT',042,2)
+
+
+select BankName,Card_Type,Card_Id,Cvv from Bank_Name join Bank_Detail on Bank_Name.Id = 1
+select BankName,Card_Type,Card_Id,Cvv from Bank_Name join Bank_Detail on Bank_Name.Id =  Bank_Detail.BankName_ID and Bank_Detail.Card_Type = 'DEBIT'
+
+select COUNT(Card_Type) as CN from Bank_Detail inner join Bank_Name on  Bank_Detail.Card_Type = 'CREDIT' and Bank_Name.Id = 3 
+
+select Card_Type,Card_Id,Cvv from Bank_Detail where BankName_ID = 2 and Card_Type ='DEBIT'
+
+select * from Bank_Name
+select * from Bank_Detail
+delete from Bank_Detail

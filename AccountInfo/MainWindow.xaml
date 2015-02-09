@@ -1,0 +1,81 @@
+﻿<Window x:Class="AccountInfo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:Test="clr-namespace:AccountInfo"
+        >
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.765" Fill="AliceBlue" Height="450" Width="300"  />
+        <Border CornerRadius="30" Background="AntiqueWhite" Margin="0,0,0,0">
+
+            <StackPanel Orientation="Vertical">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" >
+                        <ComboBox Name="Cmb1" IsEditable="True" IsReadOnly="True" Text="Please Select Card"
+	    HorizontalAlignment="Left"
+	    Margin="10,10,0,0"
+	    VerticalAlignment="Top"
+	    Width="120"
+	    Loaded="ComboBox_Loaded"
+	    SelectionChanged="ComboBox_SelectionChanged"/>
+
+                        <ComboBox Name="Cmb2" Visibility="Collapsed" IsEditable="True" IsReadOnly="True" Text="Card Type"
+	    HorizontalAlignment="Left"
+	    Margin="70,10,0,0"
+	    VerticalAlignment="Top"
+	    Width="120" SelectionChanged="Cmb2_SelectionChanged" ItemsSource="{Binding}"
+	    />
+             </StackPanel>
+                    <StackPanel Name="Stack1" Height="213" Orientation="Vertical" Margin="19,40,0,40" Visibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <StackPanel Name="stack2" Visibility="Collapsed">
+                            <DataGrid Name="Grid1" Visibility="Visible"  RowBackground="Gray" CanUserAddRows="False" AutoGenerateColumns="False"
+                   ItemsSource="{Binding}" SelectionChanged="SeIndexChanged" RenderTransformOrigin="0.46,0.308" Margin="0,0,99,0" >
+
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="CARD NUMBER" Binding="{Binding CARD_NUMBER}"/>
+                                    <DataGridTextColumn Header="CARD TYPE" Binding="{Binding CARD_TYPE}"/>
+                                    <DataGridTextColumn Header="CVV" Binding="{Binding CVV_NUMBER}"/>
+                                    <DataGridTextColumn Header="CARDNAME" Binding="{Binding CARDNAME}"/>
+                                    <DataGridTextColumn Header="EXP MM" Binding="{Binding EXPIRYM}"/>
+                                    <DataGridTextColumn Header="EXP YYY" Binding="{Binding EXPIRYY}"/>
+                                </DataGrid.Columns>
+                                <DataGrid.RowDetailsTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="No Record Found" Width="400"></TextBlock>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGrid.RowDetailsTemplate>
+
+                                <DataGrid.Style>
+                                    <Style TargetType="DataGrid">
+                                        <Setter Property="RowDetailsVisibilityMode" Value="Collapsed"></Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding DataContext.IsRecordExists, 
+                                    RelativeSource={RelativeSource Mode=FindAncestor,
+                                    AncestorType={x:Type Test:MainWindow}}}" Value="false">
+                                                <Setter Property="RowHeight" Value="0"></Setter>
+                                                <Setter Property="RowDetailsVisibilityMode" Value="Visible"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGrid.Style>
+
+                            </DataGrid>
+
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                <Button Content="Delete" Height="24" Name="DeleteButton" Width="70"  Margin="6" Click="DeleteButton_Click"  />
+                                <Button Content="Update" Height="24" Name="UpdateButton" Width="70"  Margin="6" Click="UpdateButton_Click" />
+                            </StackPanel>
+                            <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" Margin="118,2,0,0"  Foreground="#FFE5572C"  />
+                        </StackPanel>
+
+                        <TextBlock Height="20" Width="139" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,22,56,22">
+            <Hyperlink Click="Hyperlink_Click" FontSize="13" FontStyle="Oblique" Foreground="DarkOliveGreen">Insert New Card Details</Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
